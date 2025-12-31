@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* =====================
+   THEME VARIABLES
+===================== */
+
+:root {
+  --bg-main: 255 255 255;       /* light background */
+  --text-main: 17 24 39;        /* gray-900 */
+  --card-bg: 255 255 255;
+  --overlay: 255 255 255;
+}
+
+.dark {
+  --bg-main: 3 7 18;            /* deep navy */
+  --text-main: 255 255 255;
+  --card-bg: 17 24 39;          /* gray-900 */
+  --overlay: 0 0 0;
+}
+
+/* =====================
+   BASE STYLES
+===================== */
+
+html {
+   scroll-behavior: smooth;
+   scrollbar-gutter: stable;
+   
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(var(--bg-main));
+  color: rgb(var(--text-main));
+}
+
+/* =====================
+   GLASS / CARD
+===================== */
+
+.glass {
+  background: rgba(var(--card-bg), 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =====================
+   INPUTS
+===================== */
+
+.interactive-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.interactive-input::placeholder {
+  color: #9ca3af;
+}
+
+ .interactive-input:focus,
+.interactive-input:hover {
+  border-color: #84ab91;
+  box-shadow: 0 0 0 1px #84ab91,
+              0 0 20px rgba(132, 171, 145, 0.3);
+} 
